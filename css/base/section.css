@@ -1,0 +1,22 @@
+.section {
+  padding: 96px 0;
+}
+
+.section-head-title {
+  color: var(--second-text-color);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.section-title {
+  color: var(--second-text-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}

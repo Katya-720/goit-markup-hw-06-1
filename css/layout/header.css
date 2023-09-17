@@ -1,0 +1,213 @@
+.header-list {
+  display: none;
+}
+
+.header-contacts {
+  display: none;
+}
+
+.section-header {
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.54px;
+  color: var(--color-logo);
+  text-transform: uppercase;
+  margin-right: 76px;
+}
+
+.logo-color-header {
+  color: var(--second-text-color);
+}
+
+.open-mobile-menu-btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  margin: 16px 0;
+}
+
+.open-mobile-menu-btn:focus,
+.open-mobile-menu-btn:hover {
+  fill: var(--color-logo);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background-color: var(--primari-background-color);
+  padding: 0 16px;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0%);
+}
+
+.form-button-close {
+  border-radius: 50%;
+  background-color: var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  fill: var(--second-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button-close:hover,
+.form-button-close:focus {
+  background-color: var(--hover-color);
+  fill: var(--primari-background-color);
+  border: none;
+}
+
+.mobile-menu-list {
+  margin-top: 72px;
+  margin-bottom: 168px;
+}
+
+.mobile-menu-link {
+  display: block;
+  color: var(--second-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: var(--hover-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-contact {
+  display: block;
+  color: var(--primari-text-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  margin-bottom: 24px;
+}
+
+.mobile-menu-contact:hover,
+.mobile-menu-contact:focus {
+  color: var(--hover-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-contacts {
+  margin-bottom: 48px;
+}
+
+.mobile-menu-social-buttons {
+  gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .open-mobile-menu-btn {
+    display: none;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-link {
+    color: var(--second-text-color);
+    font-weight: 500;
+    padding: 24px 0;
+    position: relative;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-contacts {
+    font-style: normal;
+    display: block;
+  }
+
+  .header-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contact {
+    color: inherit;
+    font-style: normal;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-link:hover,
+  .header-link:focus,
+  .header-contact:hover,
+  .header-contact:focus {
+    color: var(--hover-color);
+  }
+
+  .curent {
+    color: var(--hover-color);
+  }
+
+  .curent::after {
+    content: '';
+    display: block;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--hover-color);
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header-contact {
+    padding: 24px 0;
+  }
+}
